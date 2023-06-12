@@ -9,6 +9,7 @@ from .ukraine_alarms import get_alarms
 
 class UkraineAlarmsView(APIView):
     def get(self, request):
+        get_alarms()
         alarms = UkraineAlarmsStatus.objects.all()
         serializer_alarms = UkraineSerializer(alarms, many=True)
         output = serializer_alarms.data

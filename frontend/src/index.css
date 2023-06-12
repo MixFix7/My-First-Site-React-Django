@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Alerts {
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Alerts h2, .Alerts span {
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+}

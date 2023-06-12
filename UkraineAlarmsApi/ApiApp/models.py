@@ -1,4 +1,6 @@
 from django.db import models
+import datetime
+import time
 
 
 class UkraineAlarmsStatus(models.Model):
@@ -28,6 +30,16 @@ class UkraineAlarmsStatus(models.Model):
     Chernihiv = models.BooleanField()
     Chernivtsi = models.BooleanField()
     Crimea = models.BooleanField()
+
+    def __str__(self):
+        return f"Status of alarms in Ukraine on {self.datetime}"
+
+
+
+
+
+
+
 
 
 

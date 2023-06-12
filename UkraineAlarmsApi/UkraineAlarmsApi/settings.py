@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ApiApp.apps.ApiappConfig',
     'rest_framework',
-    'rest_framework_api_key',
 ]
 
 MIDDLEWARE = [
@@ -53,12 +52,10 @@ MIDDLEWARE = [
 ]
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework_api_key.permissions.HasAPIKey',
-        'rest_framework.authentication.TokenAuthentication'
-    ]
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#     ]
+# }
 
 ROOT_URLCONF = 'UkraineAlarmsApi.urls'
 

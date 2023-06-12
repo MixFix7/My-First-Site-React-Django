@@ -1,7 +1,6 @@
-from rest_framework import routers
-from .api import UkraineViewSet
+from django.urls import path
+from .views import *
 
-router = routers.DefaultRouter()
-router.register('api/ukrainealarms', UkraineViewSet, 'Ukraine')
-
-urlpatterns = router.urls
+urlpatterns = [
+    path('ukraineApi/', UkraineAlarmsView.as_view(), name="alarmsApi")
+]

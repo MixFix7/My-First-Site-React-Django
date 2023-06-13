@@ -1,9 +1,17 @@
 import './App.css';
 import axios from 'axios';
-import React from 'react';
+import { Component } from 'react';
+
+const appd = () => {
+  return(
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  )
+}
 
 
-class App extends React.Component{
+class App extends Component{
   state = { details: [], }
 
   componentDidMount() {
@@ -12,7 +20,7 @@ class App extends React.Component{
     this.interval = setInterval(this.fetchData, 15000);
   };
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     clearInterval(this.interval);
   };
 
@@ -36,7 +44,7 @@ class App extends React.Component{
         <hr />
         {this.state.details.map((output, id) => (
           <div key={id}>
-            <div class="Alerts">
+            <div className="Alerts">
               <h2>Вінницька область</h2>
               <span>тривога: {output.Vinnytsia.toString()}</span>
               <h2>Луцька область</h2>
@@ -96,4 +104,5 @@ class App extends React.Component{
 };
 
 
-export default App;
+
+export default appd;
